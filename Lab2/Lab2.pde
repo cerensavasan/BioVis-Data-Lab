@@ -3,9 +3,44 @@
 //username: csavasan
 
 //arrays with the data
-String[] attributes = {"animal name", "hair", "feathers", "eggs", "milk", "airborne", "aquatic", "predator", "toothed", "backbone", "breathes", "venomous", "fins", "legs", "tail", "domestic", "catsize", "type"};
-String[] dataType = {"String", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Boolean", "Numeric", "Boolean", "Boolean", "Boolean", "Numeric"};       
-  
+String[] attributes = {"animal name",
+                     "hair",
+                     "feathers",
+                     "eggs",
+                     "milk",
+                     "airborne",
+                     "aquatic",
+                     "predator",
+                     "toothed",
+                     "backbone",
+                     "breathes",
+                     "venomous",
+                     "fins",
+                     "legs",
+                     "tail",
+                     "domestic",
+                     "catsize",
+                     "type"};
+                                          
+String[] dataType = {"String",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Numeric",
+                     "Boolean",
+                     "Boolean",
+                     "Boolean",
+                     "Numeric"};
+                     
 Table table = new Table(); //initial table to iterate through
 Table resultsTable = new Table();  //final table to print to csv table
   
@@ -19,7 +54,7 @@ void setup(){
   //iterates through zoo.data to change 1s to true and 0s to false
   for(TableRow row : table.rows()){
     for(int i=0; i < attributes.length; i++){
-      if(dataType[i].equals("Boolean")){ 
+      if(dataType[i] == "Boolean"){ 
         if(row.getInt(i) == 1){
           row.setString(i, "true");
         }
